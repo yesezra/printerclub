@@ -55,7 +55,7 @@ chmod 700 ~/.getmail
 Then, copy the the example `getmailrc` to the directory you just created:
 
 ```bash
-cp ~/code/printerclub/getmailrc.example ~/.getmail/getmailrc
+cp ~/code/printerclub/getmailrc.example ~/.getmail/getmailrc__
 ```
 
 At this point, you'll need to edit your getmailrc to your email account's server address, username, and password for your email account. The example uses the IMAP interface to Gmail. If you don't already have IMAP enabled, you'll need to do so in your Gmail settings > Forwarding and POP/IMAP > Enable IMAP. 
@@ -63,6 +63,10 @@ At this point, you'll need to edit your getmailrc to your email account's server
 Note: For security purposes, you should create an App Password for your Google account and use it instead of your account's full password. Follow [these steps](https://support.google.com/mail/answer/185833?hl=en) to set one up.
 
 By default, getmail is configured to download messages with the "printme" label in Gmail. This is a good time to create that label in your Gmail account. I recommend creating a filter that automatically adds the printme label to emails with subjects that include "printme". I also recommend that these emails skip the inbox, so you get a nice surprise in your printer.
+
+<img width="400" alt="Gmail search showing a match for subject includes printme" src="https://github.com/yesezra/printerclub/assets/173440/5d03bd53-e566-415c-8c00-7073b3ae37e7">
+<img width="400" alt="Gmail filter config showing skip inbox and autoapply label" src="https://github.com/yesezra/printerclub/assets/173440/0bc93c9f-ffd4-4447-a946-7c830d2aa311">
+
 
 Getmail offers many options so if the defaults don't work, review [the docs](https://pyropus.ca./software/getmail/) and edit your config as needed. The only critical option is to store messages in the Maildir format (`type = Maildir`) and in the proper location (`path = ~/.printerclub/Maildir/`).
 
