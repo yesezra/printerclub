@@ -10,7 +10,7 @@ getmail -q
 # Ensure attachment directory exists
 if [ ! -d "$attachdir" ]; then
   echo "Creating attachments directory..."
-  mkdir attachdir
+  mkdir $attachdir
 fi
 
 # Extract attachments from new messages, then move the messages to the archive
