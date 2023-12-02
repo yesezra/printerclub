@@ -75,12 +75,13 @@ getmail
 If you see no errors, you should be ready to test the script! Run printerclub.sh:
 
 ```bash
+chmod u+x ~/code/printerclub/printerclub.sh #make the script executable!
 ~/code/printerclub/printerclub.sh
 ```
 
 At this point, you can configure cron to run the script automatically:
 ```bash
-sudo crontab -u pi -e #replace "pi" with your Raspberry Pi user account
+crontab -u pi -e #replace "pi" with your Raspberry Pi user account
 ```
 You may need to select an editor if you don't have one set. You'll want to add the following line to the bottom of the file, then save and exit the editor. 
 ```cron
@@ -89,3 +90,11 @@ You may need to select an editor if you don't have one set. You'll want to add t
 This will run the script every 15 minutes, but you can use normal cron syntax to change this if you like. 
 
 Finally, the script is installed and configured – the last step is to tell your friends to send you messages!
+
+# Uninstalling
+
+```bash
+rm -rf ~/.printerclub
+rm -rf ~/.getmail
+crontab -e -u pi
+```

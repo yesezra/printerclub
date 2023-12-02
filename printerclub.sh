@@ -8,14 +8,15 @@ attachdir="$HOME/.printerclub/attachments/"
 getmail -q
 
 # Ensure attachment directory exists
-if [ ! -d "$DIRECTORY" ]; then
+if [ ! -d "$attachdir" ]; then
+  echo "Creating attachments directory..."
   mkdir attachdir
 fi
 
 # Extract attachments from new messages, then move the messages to the archive
-for entry in `ls $maildir`; do
-    mu extract -a $maildir$entry --target-dir=$attachdir
-    mv $maildir$entry  $oldmaildir
+for entry in `ls $newmaildir`; do
+    mu extract -a $newmaildir$entry --target-dir=$attachdir
+    mv $newmaildir$entry  $oldmaildir
 done
 
 # Print attachments
