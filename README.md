@@ -100,5 +100,5 @@ Finally, the script is installed and configured – the last step is to tell you
 ```bash
 rm -rf ~/.printerclub
 rm -rf ~/.getmail
-crontab -e -u pi
+crontab -e -u pi #then remove crontab entry for printerclub and save
 ```
