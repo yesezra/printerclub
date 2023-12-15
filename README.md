@@ -22,12 +22,10 @@ cd ~/code
 git clone https://github.com/yesezra/printerclub
 ```
 
-Before configuring the Printerclub script, you'll need to install three prerequsites on your Raspberry Pi.
+Before configuring the Printerclub script, you'll need to install three prerequsites on your Raspberry Pi: the [CUPS printer system](https://www.cups.org), [getmail mail retriever](https://pyropus.ca./software/getmail/), and [mu](https://www.djcbsoftware.nl/code/mu/).
 
 ```bash
-sudo apt install cups #install the [CUPS printer system](https://www.cups.org)
-sudo apt install getmail #install the [getmail mail retriever](https://pyropus.ca./software/getmail/)
-sudo apt install maildir-utils #install [mu](https://www.djcbsoftware.nl/code/mu/)
+sudo apt install cups getmail maildir-utils
 ```
 
 Next, ensure that your printer is configured on your Raspberry Pi. [Here's a thorough guide](https://raspberrytips.com/install-printer-raspberry-pi/). If you don't have a GUI on your Pi, I highly recommend following the steps to enable the CUPS web interface at localhost:631 and configuring your printer from there. Note that if you are trying to use this interface from outside your Pi, you'll need to replace `Listen localhost:631` with `Port 631` in `/etc/cups/cupsd.conf`, as well as adding an `Allow @local` directive in each `<Location>` section. Again, follow the steps at the link.
