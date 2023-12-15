@@ -4,14 +4,14 @@ What if pen pals, but a little more modern? Printerclub is a simple bash script 
 
 # Requirements
 
-* A Raspberry Pi (or similar linux server) that is always running
-* A printer, either connected to the Raspberry Pi on the same local network
+* A Raspberry Pi (or similar linux server) that is always running (macOS or Windows/WSL support will be added if there is sufficient interest)
+* A printer, either connected to the Raspberry Pi or on the same local network. The printer must be supported by CUPS (most are these days)
 * A Gmail or other email account used to receive messages
 * One or more friends to send you messages
 
 # How it Works
 
-Printerclub is a bash script that checks your email account for new messages that meet certain conditions (by default emails with the word "printme" in the subject line). Set up to run periodically, it will download new messages, extract the attachments, then the attachments to your printer. That's it! 
+Printerclub is a bash script that checks your email account for new messages that meet certain conditions (by default emails with the word "printme" in the subject line). Set up to run periodically, it will download new messages, extract the attachments, then print the attachments on your printer. That's it! 
 
 # Setup
 
